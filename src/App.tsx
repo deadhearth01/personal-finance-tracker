@@ -17,6 +17,7 @@ import { SettingsModal } from './components/SettingsModal';
 import { LoadingSpinner } from './components/LoadingSpinner';
 
 import type { Transaction } from './types';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const { 
@@ -218,6 +219,9 @@ function App() {
         onUpdateSettings={updateSettings}
         onResetSettings={resetSettings}
       />
+      
+      {/* Vercel Analytics */}
+      <Analytics />
     </div>
   );
 }
