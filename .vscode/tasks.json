@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Development Server",
+			"type": "shell",
+			"command": "npm run dev",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Build for Production",
+			"type": "shell",
+			"command": "npm run build",
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Preview Production Build",
+			"type": "shell",
+			"command": "npm run preview",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [],
+			"dependsOn": "Build for Production"
+		}
+	]
+}
